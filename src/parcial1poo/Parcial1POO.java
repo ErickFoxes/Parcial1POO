@@ -2,7 +2,7 @@ package parcial1poo;
 
 /**
  *
- * @author user
+ * @author hola
  */
 public class Parcial1POO {
 
