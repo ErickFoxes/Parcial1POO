@@ -12,7 +12,11 @@ public class Piso {
     int habitaciones;
     boolean Disponible;
     
-    public boolean modEstado(){
-        return true;
-    }    
+    public boolean VerificarEstado(){
+        return Disponible;
+    }
+    
+    public boolean ModificarEstado() {
+            return !Disponible;
+    }  
 }
