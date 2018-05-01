@@ -17,20 +17,22 @@ public class ListaReservacion {
     /**
      * Se utiliza para agregar reservaciones a la lista
      */
+    /*
     public void agregarReserva(){
-       /* Reservacion reservacion = new Reservacion();
+        Reservacion reservacion = new Reservacion();
         reservacion.agregarReserva(reservacion);
         Scanner read = new Scanner(System.in);
-         System.out.println("Ingrese la reservacion");
+         System.out.println("Ingrese...");
         System.out.print(": ");
         estudiante.setNombres(read.nextLine());
     }
-    */
+   
     public void modificarReserva(){
         
     }
         
     public void mostrarReserva(){
         
-    } 
+    }
+*/
 }
