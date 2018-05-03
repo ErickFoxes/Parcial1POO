@@ -4,6 +4,7 @@ import java.util.Date;
 
 /**
  *
+ * *
  * @author Erick
  */
 public class Reservacion {
