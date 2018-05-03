@@ -32,63 +32,68 @@ public class ListaPaquetes {
         
         System.out.println("Buffet:");
         respuesta = read.nextLine();
-        if("S".equals(respuesta)){
+        if("s".equals(respuesta)){
             paquete.buffet = true;
         }
         
         System.out.println("Piscina Ilimitada:");
         respuesta = read.nextLine();
-        if("S".equals(respuesta)){
+        if("s".equals(respuesta)){
             paquete.piscinaI = true;
         }
         
         System.out.println("Piscina:");
         respuesta = read.nextLine();
-        if("S".equals(respuesta)){
+        if("s".equals(respuesta)){
             paquete.piscina = true;
         }
         
         System.out.println("Servicio a la habitación:");
         respuesta = read.nextLine();
-        if("S".equals(respuesta)){
+        if("s".equals(respuesta)){
             paquete.servicioH = true;
         }
         
         System.out.println("Minibar Ilimitado:");
         respuesta = read.nextLine();
-        if("S".equals(respuesta)){
+        if("s".equals(respuesta)){
             paquete.minibar = true;
         }
         
         System.out.println("Internet:");
         respuesta = read.nextLine();
-        if("S".equals(respuesta)){
+        if("s".equals(respuesta)){
             paquete.internet = true;
         }
         
         System.out.println("Ingrese el valor extra que tendrá el paquete: ");
         paquete.costoExtra = read.nextFloat();
         
-    
     }
     
-//    //paquetes
-//        
-//        //Paquete Premium
-//        Paquete paquetePremium = new Paquete();
-//        paquetePremium.buffet = true;
-//        paquetePremium.piscinaI = true;
-//        paquetePremium.servicioH = true;
-//        paquetePremium.minibar = true;
-//        paquetePremium.internet = true;
-//        paquetePremium.costoExtra = 150;
-//       
-//        //Paquete Basico
-//        Paquete paqueteBasico = new Paquete();
-//        paqueteBasico.piscina = true;
-//        paqueteBasico.internet = true;
-//        paqueteBasico.costoExtra = 10;
-//        
-//        //paquetes
+    
+    public void AgregarPaquete(Paquete paquete) throws Exception{
+        if(paquete != null){
+            if(!paquetes.contains(paquete)){
+                paquetes.add(paquete);
+            }else{
+                Exception e = new Exception("Los datos ya pertenecen a otro paquete");
+                throw e;
+            }
+            
+        }else{
+            throw new Exception("El paquete no puede quedar vacío");
+        }
+    }
+        
+    
+    // 
+    public void MostrarPaquete(){
+               
+        paquetes.forEach((paquetee) -> {
+            System.out.println(paquetee.toString());
+        });
+    }
+    
     
 }
