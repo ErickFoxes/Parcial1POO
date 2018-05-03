@@ -10,8 +10,9 @@ package parcial1poo;
  * @author elsyc
  */
 public class Cliente {
-    Nombre nombre;
-    DUI dui;
+    String nombre;
+    String apellido;
+    int dui;
     Costo totalPago;
     int telefono;
     private int tarjetaCred;
@@ -19,8 +20,9 @@ public class Cliente {
     
     public Cliente(){}
 
-    public Cliente(Nombre nombre, DUI dui, Costo totalPago, int telefono, int tarjetaCred, Paquete paquete) {
+    public Cliente(String nombre, String apellido, int dui, Costo totalPago, int telefono, int tarjetaCred, Paquete paquete) {
         this.nombre = nombre;
+        this.apellido = apellido;
         this.dui = dui;
         this.totalPago = totalPago;
         this.telefono = telefono;
