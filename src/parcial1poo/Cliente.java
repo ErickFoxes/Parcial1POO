@@ -13,21 +13,17 @@ public class Cliente {
     String nombre;
     String apellido;
     int dui;
-    Costo totalPago;
     int telefono;
     private int tarjetaCred;
-    Paquete paquete;
     
     public Cliente(){}
 
-    public Cliente(String nombre, String apellido, int dui, Costo totalPago, int telefono, int tarjetaCred, Paquete paquete) {
+    public Cliente(String nombre, String apellido, int dui, int telefono, int tarjetaCred) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.dui = dui;
-        this.totalPago = totalPago;
         this.telefono = telefono;
         this.tarjetaCred = tarjetaCred;
-        this.paquete = paquete;
     }
 
     public int getTarjetaCred() {
