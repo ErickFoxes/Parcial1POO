@@ -7,7 +7,7 @@ package parcial1poo;
 
 /**
  *
- * @author uca
+ * @author Erick
  */
 public class Paquete {
     //agregar
