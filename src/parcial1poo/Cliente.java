@@ -13,12 +13,12 @@ public class Cliente {
     String nombre;
     String apellido;
     int dui;
-    int telefono;
+    String telefono;
     private int tarjetaCred;
     
     public Cliente(){}
 
-    public Cliente(String nombre, String apellido, int dui, int telefono, int tarjetaCred) {
+    public Cliente(String nombre, String apellido, int dui, String telefono, int tarjetaCred) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.dui = dui;
