@@ -11,6 +11,7 @@ package parcial1poo;
  */
 public class Paquete {
     //agregar
+    String nombre;
     boolean buffet = false;
     boolean piscinaI = false;
     boolean piscina = false;
@@ -21,7 +22,8 @@ public class Paquete {
     
     public Paquete (){ }
     
-    public Paquete(boolean buffet, boolean piscinaI, boolean piscina, boolean servicioH, boolean minibar, boolean internet, float costoExtra){
+    public Paquete(String nombre,boolean buffet, boolean piscinaI, boolean piscina, boolean servicioH, boolean minibar, boolean internet, float costoExtra){
+        this.nombre = nombre;
         this.buffet = buffet;
         this.piscinaI = piscinaI;
         this.piscina = piscina;
