@@ -27,7 +27,7 @@ public class ListaReservacion {
         
         System.out.println("¿Ingrese el ID");
         System.out.print(": ");
-        reservacion.setDiasReservacion(read.nextInt());
+        reservacion.setId_Reservacion(read.nextInt());
         
         System.out.println("¿Cuantos dias se hospedara?");
         System.out.print(": ");
@@ -42,13 +42,11 @@ public class ListaReservacion {
         String date = fecha;
         try{
             pruebaf = format.parse(date);
-            System.out.println("Ahora hemos creado un objeto date con la fecha indicada, "+pruebaf);
         } catch (Exception e){ System.out.println("invalid format");}
-
         if (!format.format(pruebaf).equals(date)){
-            System.out.println("invalid date!!");
+            System.out.println("Fecha Incorrecta");
         } else {
-            System.out.println("valid date");
+            reservacion.setFechaReservacion(pruebaf);
         }
         
         System.out.println("¿Ha cancelado?");
@@ -73,7 +71,19 @@ public class ListaReservacion {
     }
     
     public void modificarReserva(){
-        
+        Scanner read = new Scanner(System.in);
+        int idMod; 
+        System.out.println("Ingrese el ID de la reserva que quiere modificar");
+        idMod = read.nextInt();
+        reservas.forEach((rsrvs) -> {
+            if (idMod == rsrvs.id_Reservacion) {
+                rsrvs.diasReservacion = read.nextInt();
+                //rsrvs.fechaReservacion = ???????
+                rsrvs.cancelado = read.nextBoolean();
+                ///rsrvs.habitacion = ???????
+            }
+            
+        });
     }
         
     public void mostrarReserva(){
