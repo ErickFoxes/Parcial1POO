@@ -87,11 +87,73 @@ public class ListaPaquetes {
     }
         
     
-    // 
     public void MostrarPaquete(){
                
         paquetes.forEach((paquetee) -> {
             System.out.println(paquetee.toString());
+        });
+    }
+    
+    public void ModificarPaquete(){
+        Scanner read = new Scanner(System.in);
+        String nombrePaquete;
+        System.out.println("¿Cúal paquete desea modificar?");
+        nombrePaquete = read.nextLine();
+        paquetes.forEach((paquetee) -> {
+            if (nombrePaquete.equals(paquetee.nombre)){
+                System.out.println("Coloque S para 'Si' o N para 'No'\nEl paquete "+paquetee.nombre+" Tendrá: ");
+                System.out.println("Buffet:");
+                respuesta = read.nextLine();
+                if("s".equals(respuesta)){
+                    paquetee.buffet = true;
+                }else if("n".equals(respuesta)){
+                    paquetee.buffet = false;
+                }
+                System.out.println("Piscina Ilimitada:");
+                respuesta = read.nextLine();
+                if("s".equals(respuesta)){
+                    paquetee.piscinaI = true;
+                }else if("n".equals(respuesta)){
+                    paquetee.piscinaI = false;
+                }
+
+                System.out.println("Piscina:");
+                respuesta = read.nextLine();
+                if("s".equals(respuesta)){
+                    paquetee.piscina = true;
+                }else if("n".equals(respuesta)){
+                    paquetee.piscina = false;
+                }
+
+                System.out.println("Servicio a la habitación:");
+                respuesta = read.nextLine();
+                if("s".equals(respuesta)){
+                    paquetee.servicioH = true;
+                }else if("n".equals(respuesta)){
+                    paquetee.servicioH = false;
+                }
+
+                System.out.println("Minibar Ilimitado:");
+                respuesta = read.nextLine();
+                if("s".equals(respuesta)){
+                    paquetee.minibar = true;
+                }else if("n".equals(respuesta)){
+                    paquetee.minibar = false;
+                }
+
+                System.out.println("Internet:");
+                respuesta = read.nextLine();
+                if("s".equals(respuesta)){
+                    paquetee.internet = true;
+                }else if("n".equals(respuesta)){
+                    paquetee.internet = false;
+                }
+
+                System.out.println("Ingrese el valor extra que tendrá el paquete: ");
+                paquetee.costoExtra = read.nextFloat();
+                
+                
+            }
         });
     }
     
