@@ -8,8 +8,16 @@ public class Habitacion {
 
     boolean tipo;
     boolean Disponible = true;
-    //Costo costo;
+    Costo costo;
     Piso piso;
+    
+    public void Habitaciones(boolean tipo, boolean Disponible, Costo costo, Piso piso){
+        this.tipo = tipo;
+        this.Disponible = Disponible;
+        this.costo = costo;
+        this.piso = piso;
+    
+    }
 
     public boolean VerificarEstado(){
         return Disponible;
@@ -18,5 +26,6 @@ public class Habitacion {
     public boolean ModificarEstado() {
             return !Disponible;
     }
-
+    
+    
 }
