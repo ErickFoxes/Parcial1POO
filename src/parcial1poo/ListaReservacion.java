@@ -2,8 +2,6 @@ package parcial1poo;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 /**
  *
@@ -22,7 +20,6 @@ public class ListaReservacion {
      */
     public void agregarReserva() {
         Reservacion reservacion = new Reservacion();
-        reservas.add(reservacion);
         Scanner read = new Scanner(System.in);
 
         System.out.println("¿Ingrese el ID");
@@ -35,21 +32,14 @@ public class ListaReservacion {
 
         System.out.println("Ingrese fecha de reservacion (dd/mm/aaa)");
         System.out.print(": ");
-        String fecha = read.nextLine();
-        SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
-        Date pruebaf = null;
-        String date = fecha;
-        try {
-            pruebaf = format.parse(date);
-        } catch (Exception e) {
-            System.out.println("invalid format");
-        }
-        if (!format.format(pruebaf).equals(date)) {
-            System.out.println("Fecha Incorrecta");
-        } else {
-            reservacion.setFechaReservacion(pruebaf);
-        }
-
+        /*fecha.dia = read.nextInt();
+        System.out.print("/");
+        fecha.mes = read.nextInt();
+        System.out.print("/");
+        fecha.aneo = read.nextInt();
+        */
+        //reservacion.setFechaReservacion();
+        
         System.out.println("¿Ha cancelado?");
         System.out.print(": ");
         reservacion.setCancelado(read.nextBoolean());
@@ -80,7 +70,7 @@ public class ListaReservacion {
         reservas.forEach((rsrvs) -> {
             if (idMod == rsrvs.id_Reservacion) {
                 rsrvs.diasReservacion = read.nextInt();
-                //rsrvs.fechaReservacion = ???????
+                //rsrvs.dia = read.nextInt();
                 rsrvs.cancelado = read.nextBoolean();
                 ///rsrvs.habitacion = ???????
             }
@@ -93,4 +83,20 @@ public class ListaReservacion {
             System.out.println(rsrvs.toString());
         });
     }
+    /*
+    public void cancelarReserva(){
+        Scanner read = new Scanner(System.in);
+        int idMod;
+        System.out.println("Ingrese el ID de la reserva que quiere cancelar");
+        idMod = read.nextInt();
+        reservas.forEach((rsrvs) -> {
+            if (idMod == rsrvs.id_Reservacion) {
+                rsrvs.diasReservacion = 0;
+                //rsrvs.fechaReservacion = ???????
+                rsrvs.cancelado = read.nextBoolean();
+                ///rsrvs.habitacion = ???????
+                rsrvs.id_Reservacion = 0;
+            }
+    }
+ }*/
 }
