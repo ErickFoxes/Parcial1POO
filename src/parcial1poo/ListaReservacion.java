@@ -54,10 +54,10 @@ public class ListaReservacion {
         System.out.println("¿Ha cancelado?");
         System.out.print(": ");
         reservacion.setCancelado(read.nextBoolean()); 
-        
+    /*    
         System.out.println("¿En que habitacion se hospedara?");
         System.out.print(": ");
-        reservacion.setHabitacion(read.Habitacion());
+        reservacion.setHabitacion(read.Habitacion());*/
     }
     public void agregarReserva(Reservacion reservacion) throws Exception{
         if(reservacion != null) {
