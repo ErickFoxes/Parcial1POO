@@ -11,6 +11,7 @@ public class Reservacion {
     Date fechaReservacion;
     boolean cancelado = false;
     Habitacion habitacion;
+    Cliente cliente;
     
     public Reservacion(){}
     
