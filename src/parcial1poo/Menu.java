@@ -9,7 +9,7 @@ import java.util.Scanner;
  */
 public class Menu {
 
-    private static Menu menu;
+    private static Menu menu ;
 
     private Menu() {
     }
@@ -35,31 +35,30 @@ public class Menu {
     }
 
     public void menu() {
-        int x = 0;
+        int x;
         Scanner M = new Scanner(System.in);
         ListaReservacion lista = new ListaReservacion();
-        while (x != 9) {
-            escoger();
-            try{
-                x = M.nextInt();
-                
-                switch (x) {
-                    case 1:
-                        lista.agregarReserva();
-                        break;
-                    case 2:
-                        lista.mostrarReserva();
-                        break;
-                    case 3:
-                        lista.modificarReserva();
-                        break;
-                    default:
-                        System.out.println("Ingresa una opcion entre 1 y 9 por favor...");
-                }
-            }catch (InputMismatchException E) {
-                System.err.println("Debes ingresar un # entero");
-                M.nextLine();
-         }
+        escoger();
+        try{
+            x = M.nextInt();
+
+            switch (x) {
+                case 1:
+                    lista.agregarReserva();
+                    break;
+                case 2:
+                    lista.mostrarReserva();
+                    break;
+                case 3:
+                    lista.modificarReserva();
+                    break;
+                default:
+                    System.out.println("Ingresa una opcion entre 1 y 9 por favor...");
+            }
+        }catch (InputMismatchException E) {
+            System.err.println("Debes ingresar un # entero");
+            M.nextLine();
      }
+     
   }
 }
