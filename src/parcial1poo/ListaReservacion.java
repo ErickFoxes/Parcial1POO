@@ -2,7 +2,8 @@ package parcial1poo;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-//import java.util.Scanner;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  *
@@ -21,27 +22,43 @@ public class ListaReservacion {
     
     public void agregarReserva(){
         Reservacion reservacion = new Reservacion();
-        reservas.agregarReserva(reservacion);
+        reservas.add(reservacion);
         Scanner read = new Scanner(System.in);
         
-        System.out.println("Ingrese fecha de reservacion");
+        System.out.println("¿Ingrese el ID");
         System.out.print(": ");
-        reservacion.setFechaReservacion(read.nextLine());
+        reservacion.setDiasReservacion(read.nextInt());
         
-        System.out.println("Ingrese los dias de reserva");
+        System.out.println("¿Cuantos dias se hospedara?");
         System.out.print(": ");
-        reservacion.setDiasReservacion(read.nextLine());
+        reservacion.setDiasReservacion(read.nextInt());
         
-        System.out.println("¿En que habitacion se hospedara?");
+             
+        System.out.println("Ingrese fecha de reservacion (dd/mm/aaa)");
         System.out.print(": ");
-        reservacion.setHabitacion(read.nextLine());
+        String fecha = read.nextLine();
+        SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
+        Date pruebaf = null;
+        String date = fecha;
+        try{
+            pruebaf = format.parse(date);
+            System.out.println("Ahora hemos creado un objeto date con la fecha indicada, "+pruebaf);
+        } catch (Exception e){ System.out.println("invalid format");}
+
+        if (!format.format(pruebaf).equals(date)){
+            System.out.println("invalid date!!");
+        } else {
+            System.out.println("valid date");
+        }
         
         System.out.println("¿Ha cancelado?");
         System.out.print(": ");
-        reservacion.setCancelado(read.nextLine());
+        reservacion.setCancelado(read.nextBoolean()); 
         
+        System.out.println("¿En que habitacion se hospedara?");
+        System.out.print(": ");
+        reservacion.setHabitacion(read.Habitacion());
     }
-   
     public void agregarReserva(Reservacion reservacion) throws Exception{
         if(reservacion != null) {
             if (!reservas.contains(reservacion)) {
