@@ -32,5 +32,11 @@ public class Paquete {
         this.internet = internet;
         this.costoExtra = costoExtra;        
     }
+    
+    @Override
+    public String toString() {
+        
+        return "El paquete "+nombre+" contiene:\nBuffet: "+buffet+ "\nPiscina Ilimitada: "+piscinaI+"\nPiscina: "+ piscina+"\nServicio a la habitación: "+servicioH+"\nminibar: "+minibar+"\ninternet: "+internet+"\ncosto Extra: $"+costoExtra;
+    }
 
 }
