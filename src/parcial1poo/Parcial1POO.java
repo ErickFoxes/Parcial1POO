@@ -1,6 +1,8 @@
 package parcial1poo;
 
-import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 
 /**
  *
@@ -8,14 +10,25 @@ import java.util.Scanner;
  */
 public class Parcial1POO {
 
-    public static void main(String[] args) {
+    public static void main(String[] args){
         
-        //Menu menu = new Menu();
         
-        Scanner sc = new Scanner(System.in);
-        int i = sc.nextInt();
+            //Menu menu = new Menu();
+            
+//        Scanner sc = new Scanner(System.in);
+//        int i = sc.nextInt();
 
-        //menu.menu(i);
+//        menu.menu(i);
+
+//        ListaPaquetes listaPaquete = new ListaPaquetes();
+//        try {
+//            listaPaquete.AgregarPaquete(new Paquete("Basico",false,false,true,false,false,true,10));
+//            listaPaquete.AgregarPaquete(new Paquete("Premium",true,true,false,true,true,true,150));
+//        } catch (Exception ex) {
+//            Logger.getLogger(Parcial1POO.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//        
+//        listaPaquete.MostrarPaquete();
 
     }
 
