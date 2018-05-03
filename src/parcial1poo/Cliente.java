@@ -10,54 +10,22 @@ package parcial1poo;
  * @author elsyc
  */
 public class Cliente {
-    private DUI dui;
-    private Reservacion reservacion;
-    private Costo totalPago;
-    private int telefono;
+    Nombre nombre;
+    DUI dui;
+    Costo totalPago;
+    int telefono;
     private int tarjetaCred;
-    private Paquete paquete;
+    Paquete paquete;
     
     public Cliente(){}
 
-    public Cliente(DUI dui, Reservacion reservacion, Costo totalPago, int telefono, int tarjetaCred, Paquete paquete) {
+    public Cliente(Nombre nombre, DUI dui, Costo totalPago, int telefono, int tarjetaCred, Paquete paquete) {
+        this.nombre = nombre;
         this.dui = dui;
-        this.reservacion = reservacion;
         this.totalPago = totalPago;
         this.telefono = telefono;
         this.tarjetaCred = tarjetaCred;
         this.paquete = paquete;
-    }
-
-    public DUI getDui() {
-        return dui;
-    }
-
-    public void setDui(DUI dui) {
-        this.dui = dui;
-    }
-
-    public Reservacion getReservacion() {
-        return reservacion;
-    }
-
-    public void setReservacion(Reservacion reservacion) {
-        this.reservacion = reservacion;
-    }
-
-    public Costo getTotalPago() {
-        return totalPago;
-    }
-
-    public void setTotalPago(Costo totalPago) {
-        this.totalPago = totalPago;
-    }
-
-    public int getTelefono() {
-        return telefono;
-    }
-
-    public void setTelefono(int telefono) {
-        this.telefono = telefono;
     }
 
     public int getTarjetaCred() {
@@ -66,14 +34,6 @@ public class Cliente {
 
     public void setTarjetaCred(int tarjetaCred) {
         this.tarjetaCred = tarjetaCred;
-    }
-
-    public Paquete getPaquete() {
-        return paquete;
-    }
-
-    public void setPaquete(Paquete paquete) {
-        this.paquete = paquete;
     }
     
 }
