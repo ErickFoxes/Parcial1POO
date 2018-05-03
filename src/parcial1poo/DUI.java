@@ -10,8 +10,8 @@ package parcial1poo;
  * @author elsyc
  */
 public class DUI {
-    private int dui;
-    private int verificador;
+    int dui;
+    int verificador;
     
     public DUI(){}
 
@@ -19,21 +19,4 @@ public class DUI {
         this.dui = dui;
         this.verificador = verificador;
     }
-
-    public int getDui() {
-        return dui;
-    }
-
-    public void setDui(int dui) {
-        this.dui = dui;
-    }
-
-    public int getVerificador() {
-        return verificador;
-    }
-
-    public void setVerificador(int verificador) {
-        this.verificador = verificador;
-    }
-     
 }
