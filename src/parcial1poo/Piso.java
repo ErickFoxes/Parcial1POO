@@ -19,11 +19,4 @@ public class Piso {
         this.Disponible = Disponible;
     }
     
-    public boolean VerificarEstado(){
-        return Disponible;
-    }
-    
-    public boolean ModificarEstado() {
-            return !Disponible;
-    }  
 }
