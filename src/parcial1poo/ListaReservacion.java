@@ -22,38 +22,44 @@ public class ListaReservacion {
      */
     public void agregarReserva() {
         Reservacion reservacion = new Reservacion();
-        Date date = new Date();
         Scanner read = new Scanner(System.in);
+        String resp;
 
         System.out.println("¿Ingrese el ID");
         System.out.print(": ");
-        reservacion.setId_Reservacion(read.nextInt());
+        reservacion.id_Reservacion = read.nextInt();
 
         System.out.println("¿Cuantos dias se hospedara?");
         System.out.print(": ");
-        reservacion.setDiasReservacion(read.nextInt());
+        reservacion.diasReservacion = read.nextInt();
 
-        System.out.println("Ingrese fecha de reservacion (MM/dd/aaa)");
+        System.out.println("Ingrese fecha de reservacion (dd/MM/aaa)");
         System.out.print(": ");
-        date = new Date(read.nextLine());
-        reservacion.setFechaReservacion(date);
-        /*fecha.dia = read.nextInt();
-        System.out.print("/");
-        fecha.mes = read.nextInt();
-        System.out.print("/");
-        fecha.aneo = read.nextInt();
-        */
-        //reservacion.setFechaReservacion();
+        //String dia, mes, annio;
+        /*System.out.println("Ingresa el dia");
+        System.out.print(": ");
+        dia = read.nextLine();
+        System.out.println("Ingresa el mes");
+        System.out.print(": ");
+        mes = read.nextLine();
+        System.out.println("Ingresa el annio");
+        System.out.print(": ");
+        annio = read.nextLine(); mes+"/"+dia+"/"+annio*/
+        Date date = new Date(5/2/3);
+        reservacion.fechaReservacion = date;
         
-        System.out.println("¿Ha cancelado?");
+        System.out.println("¿Ha cancelado?\nColoque S para 'Si' o N para 'No'");
         System.out.print(": ");
-        reservacion.setCancelado(read.nextBoolean());
+        resp = read.nextLine();
+        if("s".equals(resp)){
+            reservacion.cancelado = true;
+        
         /*    
         System.out.println("¿En que habitacion se hospedara?");
         System.out.print(": ");
         reservacion.setHabitacion(read.Habitacion());*/
     }
-
+    }
     public void agregarReserva(Reservacion reservacion) throws Exception {
         if (reservacion != null) {
             if (!reservas.contains(reservacion)) {
@@ -76,7 +82,9 @@ public class ListaReservacion {
         reservas.forEach((rsrvs) -> {
             if (idMod == rsrvs.id_Reservacion) {
                 rsrvs.diasReservacion = read.nextInt();
-                //rsrvs.dia = read.nextInt();
+                Date date = new Date();
+                date = new Date(read.nextLine());
+                rsrvs.fechaReservacion = date;
                 rsrvs.cancelado = read.nextBoolean();
                 ///rsrvs.habitacion = ???????
             }
@@ -90,20 +98,4 @@ public class ListaReservacion {
             
         });
     }
-    /*
-    public void cancelarReserva(){
-        Scanner read = new Scanner(System.in);
-        int idMod;
-        System.out.println("Ingrese el ID de la reserva que quiere cancelar");
-        idMod = read.nextInt();
-        reservas.forEach((rsrvs) -> {
-            if (idMod == rsrvs.id_Reservacion) {
-                rsrvs.diasReservacion = 0;
-                //rsrvs.fechaReservacion = ???????
-                rsrvs.cancelado = read.nextBoolean();
-                ///rsrvs.habitacion = ???????
-                rsrvs.id_Reservacion = 0;
-            }
-    }
- }*/
 }
