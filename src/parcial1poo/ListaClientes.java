@@ -52,6 +52,13 @@ public class ListaClientes {
 
     }
     
+    public void MostrarCliente(){
+               
+        clientes.forEach((clientee) -> {
+            System.out.println(clientee.toString());
+        });
+    }
+    
     public void ModificarCliente(){
         Scanner leer = new Scanner(System.in);
         int IDcliente;
@@ -60,46 +67,18 @@ public class ListaClientes {
         
         clientes.forEach((clientee) -> {
             if(IDcliente == clientee.dui){
-                System.out.println("Desea modificar el nombre: s/n");
-                res = leer.nextLine();
-                if("s".equals(res)){
-                    System.out.println("Nuevo nombre: ");
-                    clientee.nombre = leer.nextLine();
-                }
-                else{
-                    System.out.println("Nombre sin cambios."); 
-                }
+                System.out.println("Nuevo nombre: ");
+                clientee.nombre = leer.nextLine();
                 
-                System.out.println("Desea modificar el apellido: s/n ");
-                res = leer.nextLine();
-                if("s".equals(res)){
-                    System.out.println("Nuevo apellido: ");
-                    clientee.apellido = leer.nextLine();
-                }
-                else{
-                    System.out.println("Apellido sin cambios."); 
-                }
-                
-                System.out.println("Desea modificar el telefono: s/n");
-                res = leer.nextLine();
-                if("s".equals(res)){
-                    System.out.println("Nuevo telefono: ");
-                    clientee.telefono = leer.nextLine();
-                }
-                else{
-                    System.out.println("Telefono sin cambios."); 
-                    
-                }
-                
-                System.out.println("Desea modificar la tarjeta de credito: ");
-                res = leer.nextLine();
-                if("s".equals(res)){
-                    System.out.println("Nuevo tarjeta: ");
-                    clientee.setTarjetaCred(leer.nextInt());
-                }
-                else{
-                    System.out.println("Tarjeta sin cambios."); 
-                }
+                System.out.println("Nuevo apellido: ");
+                clientee.apellido = leer.nextLine();
+
+                System.out.println("Nuevo telefono: ");
+                clientee.telefono = leer.nextLine();
+
+                System.out.println("Nuevo tarjeta: ");
+                clientee.setTarjetaCred(leer.nextInt());
+
             }
         });
                 
