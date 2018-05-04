@@ -25,12 +25,12 @@ public class ListaClientes {
         
         System.out.println("Ingrese el apellido del cliente: ");
         cliente.apellido = leer.nextLine();
-        
-        System.out.println("Ingrese el numero de DUI del cliente: ");
-        cliente.dui = leer.nextInt();
-        
+       
         System.out.println("Ingresar el numero de telefono del cliente: ");
         cliente.telefono = leer.nextLine();
+        
+        System.out.println("Ingrese el numero de DUI del cliente: ");
+        cliente.dui = leer.nextLine();
         
         System.out.println("Ingresar el numero de tarjeta de credito: ");
         cliente.setTarjetaCred(leer.nextInt());
@@ -61,12 +61,12 @@ public class ListaClientes {
     
     public void ModificarCliente(){
         Scanner leer = new Scanner(System.in);
-        int IDcliente;
+        String IDcliente;
         System.out.println("Ingresar el dui del cliente que quiere modificar: ");
-        IDcliente = leer.nextInt();
+        IDcliente = leer.nextLine();
         
         clientes.forEach((clientee) -> {
-            if(IDcliente == clientee.dui){
+            if(IDcliente.equals(clientee.dui)){
                 System.out.println("Nuevo nombre: ");
                 clientee.nombre = leer.nextLine();
                 
