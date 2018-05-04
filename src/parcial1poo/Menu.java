@@ -30,10 +30,12 @@ public class Menu {
         System.out.println("5. Mostrar Reservaciones (por semana)");
         System.out.println("6. Modificar Reservación");
         System.out.println("7. Verificar el estado del Piso");
-        System.out.println("8. verificar el estado de la Habitacion");
+        System.out.println("8. Verificar el estado de la Habitacion");
         System.out.println("9. Cambiar el estado del Piso");
         System.out.println("10. Cambiar el estado de la Habitacion");
-        System.out.println("11. Salir");
+        System.out.println("11. Agregar cliente");
+        System.out.println("12. Modificar cliente");
+        System.out.println("13. Salir");
     }
 
     public void menu() {
@@ -41,9 +43,10 @@ public class Menu {
         Scanner M = new Scanner(System.in);
         ListaReservacion lista = new ListaReservacion();
         ListaPaquetes paquete = new ListaPaquetes();
+        ListaClientes cliente = new ListaClientes();
         Piso piso = new Piso();
         Habitacion hab = new Habitacion();
-        while (x != 9) {
+        while (x != 13) {
             escoger();
             try {
                 x = M.nextInt();
@@ -80,7 +83,10 @@ public class Menu {
                         hab.ModificarEstado();
                         break;
                     case 11:
-                        System.out.println("Adios ヘ(^_^ヘ)");
+                        cliente.agregarCliente();
+                        break;
+                    case 12:
+                        cliente.ModificarCliente();
                         break;
                     default:
                         System.out.println("Por favor ingresa un valor valido");      
