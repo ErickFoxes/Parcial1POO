@@ -22,6 +22,7 @@ public class ListaReservacion {
      */
     public void agregarReserva() {
         Reservacion reservacion = new Reservacion();
+        reservas.add(reservacion);
         Scanner read = new Scanner(System.in);
         String resp;
 
