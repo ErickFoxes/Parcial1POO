@@ -20,7 +20,6 @@ public class ListaReservacion {
      */
     public void agregarReserva() {
         Reservacion reservacion = new Reservacion();
-        
         reservas.add(reservacion);
         Scanner read = new Scanner(System.in);
         
@@ -45,8 +44,9 @@ public class ListaReservacion {
         System.out.println("Ingresa el annio");
         System.out.print(": ");
         annio = read.nextInt(); 
-        Fecha fecha = new Fecha(dia, mes, annio);
-        reservacion.fechaReservacion = fecha;
+        Fecha f;
+        f = new Fecha(dia, mes, annio);
+        reservacion.fechaReservacion = f;
         
         reservacion.cancelado = false;
         
@@ -77,9 +77,20 @@ public class ListaReservacion {
         reservas.forEach((rsrvs) -> {
             if (idMod == rsrvs.id_Reservacion) {
                 rsrvs.diasReservacion = read.nextInt();
-//                Date date = new Date();
-//                date = new Date(read.nextLine());
-//                rsrvs.fechaReservacion = date;
+                System.out.println("Ingrese fecha de reservacion (dd/MM/aaa)");
+                System.out.print(": ");
+                int dia, mes, annio;
+                System.out.println("Ingresa el dia");
+                System.out.print(": ");
+                dia = read.nextInt();
+                System.out.println("Ingresa el mes");
+                System.out.print(": ");
+                mes = read.nextInt();
+                System.out.println("Ingresa el annio");
+                System.out.print(": ");
+                annio = read.nextInt(); 
+                Fecha fecha = new Fecha(dia, mes, annio);
+                rsrvs.fechaReservacion = fecha;
                 rsrvs.cancelado = read.nextBoolean();
                 ///rsrvs.habitacion = ???????
             }
@@ -88,9 +99,9 @@ public class ListaReservacion {
     }
 
     public void mostrarReserva() {
-        reservas.forEach((rsrvs) -> {
+        for ( Reservacion rsrvs : reservas){ 
             System.out.println(rsrvs.toString());
-            
-        });
+            System.out.println(rsrvs.fechaReservacion);
+        }
     }
 }

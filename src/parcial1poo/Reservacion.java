@@ -24,6 +24,6 @@ public class Reservacion {
     
     @Override
     public String toString() {
-        return "El id es: "+id_Reservacion+" \nCantidad de dias: "+diasReservacion+ "\nEstado:"+cancelado;
+        return "El id es: "+id_Reservacion+" \nCantidad de dias: "+diasReservacion+ "\nEstado:"+cancelado+ "\nFecha:"+fechaReservacion;
     }
 }
