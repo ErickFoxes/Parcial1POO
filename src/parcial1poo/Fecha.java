@@ -14,6 +14,11 @@ public class Fecha {
         this.mes = mes;
         this.aneo = aneo;
     }
+    
+    @Override
+    public String toString() {
+        return "El dia es: "+dia+" \nEl mes es: "+mes+"\nEl annio: "+aneo;
+    }
   
 }
 
