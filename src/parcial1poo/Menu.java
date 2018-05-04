@@ -96,7 +96,23 @@ public class Menu {
                         cliente.MostrarCliente();
                         break;
                     case 14:
-                       // habitaciones.add();
+                        String Clave,Piso,id;
+                        Boolean doble,cancelado;
+                        double costo;
+                        int Num;
+                                              
+                        System.out.println("Tipo de habitacion:");
+                        doble = M.nextBoolean();
+                        System.out.println("Esta disponible:");
+                        cancelado = M.nextBoolean();
+                        System.out.println("¿Cual es el piso?:");
+                        Piso = M.next();
+                        System.out.println("Número de habitacion:");
+                        Num = M.nextInt();
+                        System.out.println("Costo habitacion:");
+                        costo = M.nextDouble();
+                        Clave = Piso+Num;
+                        habitaciones.add(Clave,new Habitacion(Clave,doble,cancelado,costo,Piso,Num));
                         break;
                     case 15:
                         habitaciones.mostrar();
