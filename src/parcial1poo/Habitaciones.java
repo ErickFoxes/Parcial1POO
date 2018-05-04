@@ -46,8 +46,16 @@ public class Habitaciones {
     }
     
     public void modificar(String clave) {
+        
         Habitacion h = habitaciones.get(clave);
         Scanner s = new Scanner(System.in);
+
+        System.out.println("Ingrese la opcion de lo que desea modificar: ");
+        System.out.println("1. Costo");
+        System.out.println("2. Tipo (true/false)");
+        System.out.println("3. Disponiblidad (true/false)");
+        System.out.println("4. Piso");
+        System.out.println("5. Numero de habitacion");
         int i = s.nextInt();
         
         switch (i){
