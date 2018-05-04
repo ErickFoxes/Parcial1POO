@@ -9,34 +9,11 @@ public class Fecha {
     public int mes;
     public int aneo;
 
-    public Fecha() {
-    }
-
-    public int getDia() {
-        return dia;
-    }
-
-    public void setDia(int dia) {
+    public Fecha(int dia, int mes, int aneo) {
         this.dia = dia;
-    }
-
-    public int getMes() {
-        return mes;
-    }
-
-    public void setMes(int mes) {
         this.mes = mes;
-    }
-
-    public int getAneo() {
-        return aneo;
-    }
-
-    public void setAneo(int aneo) {
         this.aneo = aneo;
     }
-    
-    
-    
+  
 }
 

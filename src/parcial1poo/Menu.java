@@ -35,7 +35,9 @@ public class Menu {
         System.out.println("10. Cambiar el estado de la Habitacion");
         System.out.println("11. Agregar cliente");
         System.out.println("12. Modificar cliente");
-        System.out.println("13. Salir");
+        System.out.println("13. Agreagar habitaciones");
+        System.out.println("14. Mostrar habitaciones");
+        System.out.println("17. Salir");
     }
 
     public void menu() {
@@ -44,6 +46,7 @@ public class Menu {
         ListaReservacion lista = new ListaReservacion();
         ListaPaquetes paquete = new ListaPaquetes();
         ListaClientes cliente = new ListaClientes();
+        Habitaciones habitaciones = new Habitaciones();
         Piso piso = new Piso();
         Habitacion hab = new Habitacion();
         while (x != 13) {
@@ -87,6 +90,15 @@ public class Menu {
                         break;
                     case 12:
                         cliente.ModificarCliente();
+                        break;
+                    case 13:
+                       // habitaciones.add();
+                        break;
+                    case 14:
+                        habitaciones.mostrar();
+                        break;
+                    case 15:
+                        
                         break;
                     default:
                         System.out.println("Por favor ingresa un valor valido");      
