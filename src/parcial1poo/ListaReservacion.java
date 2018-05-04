@@ -92,7 +92,7 @@ public class ListaReservacion {
                 Fecha fecha = new Fecha(dia, mes, annio);
                 rsrvs.fechaReservacion = fecha;
                 rsrvs.cancelado = read.nextBoolean();
-                ///rsrvs.habitacion = ???????
+                
             }
 
         });
