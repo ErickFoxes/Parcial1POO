@@ -17,7 +17,7 @@ public class Fecha {
     
     @Override
     public String toString() {
-        return "El dia es: "+dia+" \nEl mes es: "+mes+"\nEl annio: "+aneo;
+        return "\nEl dia es: "+dia+" \nEl mes es: "+mes+"\nEl annio: "+aneo;
     }
   
     
