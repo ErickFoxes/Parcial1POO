@@ -75,13 +75,13 @@ public class Menu {
                         lista.modificarReserva();
                         break;
                     case 7:
-                        piso.VerificarEstado();
+//                        piso.VerificarEstado();
                         break;
                     case 8:
                         hab.VerificarEstado();
                         break;
                     case 9:
-                        piso.ModificarEstado();
+//                        piso.ModificarEstado();
                         break;
                     case 10:
                         hab.ModificarEstado();
