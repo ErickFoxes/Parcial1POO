@@ -81,15 +81,27 @@ public class Menu {
                         cliente.MostrarCliente();
                         break;
                     case 10:
-                        String Clave,Piso,id;
-                        Boolean doble,cancelado;
+                        String Clave,Piso,id,resp;
+                        boolean doble= true,cancelado=false;
                         double costo;
                         int Num;
                                               
-                        System.out.println("Tipo de habitacion:");
-                        doble = M.nextBoolean();
-                        System.out.println("Esta disponible:");
-                        cancelado = M.nextBoolean();
+                        System.out.println("Tipo de habitacion (Ingrese 'simple' o 'doble'):");
+                        resp = M.next();
+                        if("simple".equals(resp)){
+                            doble = true;
+                        }else if("doble".equals(resp)){
+                            doble = false;
+                        }
+                        
+                        System.out.println("Esta disponible (Ingrese 'Disponible' o 'Cancelado'):");
+                        resp = M.next();
+                        if("disponible".equals(resp)){
+                            cancelado = true;
+                        }else if("cancelado".equals(resp)){
+                            cancelado = false;
+                        }
+                        
                         System.out.println("¿Cual es el piso?:");
                         Piso = M.next();
                         System.out.println("Número de habitacion:");
