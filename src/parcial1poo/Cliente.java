@@ -7,13 +7,13 @@ package parcial1poo;
 public class Cliente {
     String nombre;
     String apellido;
-    int dui;
+    String dui;
     String telefono;
     private int tarjetaCred;
     
     public Cliente(){}
 
-    public Cliente(String nombre, String apellido, int dui, String telefono, int tarjetaCred) {
+    public Cliente(String nombre, String apellido, String dui, String telefono, int tarjetaCred) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.dui = dui;
@@ -27,6 +27,12 @@ public class Cliente {
 
     public void setTarjetaCred(int tarjetaCred) {
         this.tarjetaCred = tarjetaCred;
+    }
+    
+    @Override
+    public String toString() {
+        
+        return "El nombre del cliente: "+nombre+"\nEl apellido es: "+apellido+ "\nEl DUI es: "+dui+"\nEl telefono es: "+telefono+"\nTarjeta de credito: "+tarjetaCred;
     }
     
 }
