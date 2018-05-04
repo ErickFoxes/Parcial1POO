@@ -22,7 +22,26 @@ public class Habitaciones {
     
     public void mostrar(){
         habitaciones.values().forEach((h) -> {
-            System.out.println(h.getPiso());
+            String Imprimir,TipoH,Disponible,piso,Clave;
+            double costo;
+            int NHabitacion;
+            if(h.isTipo()==true){
+                TipoH = "Simple";
+            }else{
+                TipoH = "Doble";
+            }
+            if(h.isDisponible()==true){
+                Disponible = "Disponible";
+            }else{
+                Disponible = "No Disponible";
+            }
+            NHabitacion=h.getNumHb();
+            costo = h.getCosto();
+            piso=h.getPiso();
+            Clave = h.getIdHabitacion();
+            Imprimir = "id habitacion:"+Clave+"\nTipo Habitacion: "+TipoH+"\nDisponibilidad: "+Disponible+"\nCosto de habitación: "+costo+"\nPiso: "+piso+"\nNumero de habitacion: "+NHabitacion;
+            
+            System.out.println(Imprimir);
         });
     }
     
