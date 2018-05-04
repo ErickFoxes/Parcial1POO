@@ -23,45 +23,9 @@ public class Reservacion {
         this.habitacion = habitacion;
         
     }
-
-    public int getId_Reservacion() {
-        return id_Reservacion;
-    }
-
-    public int getDiasReservacion() {
-        return diasReservacion;
-    }
-
-    public Date getFechaReservacion() {
-        return fechaReservacion;
-    }
-
-    public boolean getCancelado() {
-        return cancelado;
-    }
-
-    public Habitacion getHabitacion() {
-        return habitacion;
-    }
     
-
-    public void setId_Reservacion(int id_Reservacion) {
-        this.id_Reservacion = id_Reservacion;
-    }
-
-    public void setDiasReservacion(int diasReservacion) {
-        this.diasReservacion = diasReservacion;
-    }
-
-    public void setFechaReservacion(Date fechaReservacion) {
-        this.fechaReservacion = fechaReservacion;
-    }
-
-    public void setCancelado(boolean cancelado) {
-        this.cancelado = cancelado;
-    }
-
-    public void setHabitacion(Habitacion habitacion) {
-        this.habitacion = habitacion;
+    @Override
+    public String toString() {
+        return "El id es: "+id_Reservacion+" \nCantidad de dias: "+diasReservacion+ "\nEstado:"+cancelado;
     }
 }
