@@ -76,6 +76,7 @@ public class ListaReservacion {
         idMod = read.nextInt();
         reservas.forEach((rsrvs) -> {
             if (idMod == rsrvs.id_Reservacion) {
+                System.out.println("Modificar cantidad de dias reservacion: ");
                 rsrvs.diasReservacion = read.nextInt();
                 System.out.println("Ingrese fecha de reservacion (dd/MM/aaa)");
                 System.out.print(": ");
@@ -91,6 +92,7 @@ public class ListaReservacion {
                 annio = read.nextInt(); 
                 Fecha fecha = new Fecha(dia, mes, annio);
                 rsrvs.fechaReservacion = fecha;
+                System.out.println("Estado reserva: Cancelado (true/false)");
                 rsrvs.cancelado = read.nextBoolean();
                 
             }
@@ -98,10 +100,10 @@ public class ListaReservacion {
         });
     }
 
-    public void mostrarReserva() {
-        for ( Reservacion rsrvs : reservas){ 
+    public void mostrarReserva(){
+               
+        reservas.forEach((rsrvs) -> {
             System.out.println(rsrvs.toString());
-            System.out.println(rsrvs.fechaReservacion);
-        }
+        });
     }
 }
