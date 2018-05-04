@@ -10,22 +10,20 @@ package parcial1poo;
  * @author elsyc
  */
 public class Cliente {
-    Nombre nombre;
-    DUI dui;
-    Costo totalPago;
-    int telefono;
+    String nombre;
+    String apellido;
+    int dui;
+    String telefono;
     private int tarjetaCred;
-    Paquete paquete;
     
     public Cliente(){}
 
-    public Cliente(Nombre nombre, DUI dui, Costo totalPago, int telefono, int tarjetaCred, Paquete paquete) {
+    public Cliente(String nombre, String apellido, int dui, String telefono, int tarjetaCred) {
         this.nombre = nombre;
+        this.apellido = apellido;
         this.dui = dui;
-        this.totalPago = totalPago;
         this.telefono = telefono;
         this.tarjetaCred = tarjetaCred;
-        this.paquete = paquete;
     }
 
     public int getTarjetaCred() {
