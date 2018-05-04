@@ -46,20 +46,16 @@ public class ListaReservacion {
         System.out.println("Ingresa el annio");
         System.out.print(": ");
         annio = read.nextLine(); mes+"/"+dia+"/"+annio*/
-        Date date = new Date(5/2/3);
-        reservacion.fechaReservacion = date;
+//        Date date = new Date(5/2/3);
+//        reservacion.fechaReservacion = date;
         
-        System.out.println("¿Ha cancelado?\nColoque S para 'Si' o N para 'No'");
-        System.out.print(": ");
-        resp = read.nextLine();
-        if("s".equals(resp)){
-            reservacion.cancelado = true;
+        reservacion.cancelado = false;
         
         /*    
         System.out.println("¿En que habitacion se hospedara?");
         System.out.print(": ");
         reservacion.setHabitacion(read.Habitacion());*/
-    }
+
     }
     public void agregarReserva(Reservacion reservacion) throws Exception {
         if (reservacion != null) {
@@ -83,9 +79,9 @@ public class ListaReservacion {
         reservas.forEach((rsrvs) -> {
             if (idMod == rsrvs.id_Reservacion) {
                 rsrvs.diasReservacion = read.nextInt();
-                Date date = new Date();
-                date = new Date(read.nextLine());
-                rsrvs.fechaReservacion = date;
+//                Date date = new Date();
+//                date = new Date(read.nextLine());
+//                rsrvs.fechaReservacion = date;
                 rsrvs.cancelado = read.nextBoolean();
                 ///rsrvs.habitacion = ???????
             }
