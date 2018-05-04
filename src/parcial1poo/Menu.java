@@ -29,12 +29,11 @@ public class Menu {
         System.out.println("4. Ingresar Reservación");
         System.out.println("5. Mostrar Reservaciones (por semana)");
         System.out.println("6. Modificar Reservación");
-        System.out.println("7. Cancelar Reservación");
-        System.out.println("8. Mantenimiento Piso");
-        System.out.println("9. Mantenimiento Habitacion");
-        System.out.println("10. Modificar Precios de Habitaciónes");
-        System.out.println("11. Modificar paquetes");
-System.out.println("12. Salir");
+        System.out.println("7. Verificar el estado del Piso");
+        System.out.println("8. verificar el estado de la Habitacion");
+        System.out.println("9. Cambiar el estado del Piso");
+        System.out.println("10. Cambiar el estado de la Habitacion");
+        System.out.println("11. Salir");
     }
 
     public void menu() {
@@ -42,11 +41,13 @@ System.out.println("12. Salir");
         Scanner M = new Scanner(System.in);
         ListaReservacion lista = new ListaReservacion();
         ListaPaquetes paquete = new ListaPaquetes();
+        Piso piso = new Piso();
+        Habitacion hab = new Habitacion();
         while (x != 9) {
             escoger();
-            try{
+            try {
                 x = M.nextInt();
-                
+
                 switch (x) {
                     case 1:
                         paquete.AgregarPaquete();
@@ -57,25 +58,37 @@ System.out.println("12. Salir");
                     case 3:
                         paquete.ModificarPaquete();
                         break;
-                        case 4:
-                            lista.agregarReserva();
-                            break;
-                        case 5:
-                            lista.mostrarReserva();
-                            break;
-                        case 6:
-                            lista.modificarReserva();
-                            break;
-                        case 7:
-                            
+                    case 4:
+                        lista.agregarReserva();
+                        break;
+                    case 5:
+                        lista.mostrarReserva();
+                        break;
+                    case 6:
+                        lista.modificarReserva();
+                        break;
+                    case 7:
+                        piso.VerificarEstado();
+                        break;
+                    case 8:
+                        hab.VerificarEstado();
+                        break;
+                    case 9:
+                        piso.ModificarEstado();
+                        break;
+                    case 10:
+                        hab.ModificarEstado();
+                        break;
+                    case 11:
+                        System.out.println("Adios ヘ(^_^ヘ)");
+                        break;
                     default:
-                        System.out.println("Ingresa una opcion entre 1 y 9 por favor...");
+                        System.out.println("Por favor ingresa un valor valido");      
                 }
-            }catch (InputMismatchException E) {
+            } catch (InputMismatchException E){
                 System.err.println("Debes ingresar un # entero");
                 M.nextLine();
-         }
-     }
+            }
+        }
     }
 }
-    
