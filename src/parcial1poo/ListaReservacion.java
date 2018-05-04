@@ -2,6 +2,8 @@ package parcial1poo;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.Date;
+//import java.text.SimpleDateFormat;
 
 /**
  *
@@ -20,6 +22,7 @@ public class ListaReservacion {
      */
     public void agregarReserva() {
         Reservacion reservacion = new Reservacion();
+        Date date = new Date();
         Scanner read = new Scanner(System.in);
 
         System.out.println("¿Ingrese el ID");
@@ -30,8 +33,10 @@ public class ListaReservacion {
         System.out.print(": ");
         reservacion.setDiasReservacion(read.nextInt());
 
-        System.out.println("Ingrese fecha de reservacion (dd/mm/aaa)");
+        System.out.println("Ingrese fecha de reservacion (MM/dd/aaa)");
         System.out.print(": ");
+        date = new Date(read.nextLine());
+        reservacion.setFechaReservacion(date);
         /*fecha.dia = read.nextInt();
         System.out.print("/");
         fecha.mes = read.nextInt();
@@ -66,6 +71,7 @@ public class ListaReservacion {
         Scanner read = new Scanner(System.in);
         int idMod;
         System.out.println("Ingrese el ID de la reserva que quiere modificar");
+        System.out.print(":");
         idMod = read.nextInt();
         reservas.forEach((rsrvs) -> {
             if (idMod == rsrvs.id_Reservacion) {
@@ -81,6 +87,7 @@ public class ListaReservacion {
     public void mostrarReserva() {
         reservas.forEach((rsrvs) -> {
             System.out.println(rsrvs.toString());
+            
         });
     }
     /*

@@ -1,19 +1,21 @@
 package parcial1poo;
 
+import java.util.Date;
+
 /**
  *
  * @author Erick
  */
 public class Reservacion {
     int id_Reservacion, diasReservacion;
-    Fecha fechaReservacion;
+    Date fechaReservacion;
     boolean cancelado = false;
     Habitacion habitacion;
     Cliente cliente;
     
     public Reservacion(){}
     
-    public Reservacion(int id_Reservacion,Fecha fechaReservacion, int diasReservacion, boolean cancelado, Habitacion habitacion){
+    public Reservacion(int id_Reservacion,Date fechaReservacion, int diasReservacion, boolean cancelado, Habitacion habitacion){
         this.id_Reservacion = id_Reservacion;
         this.fechaReservacion = fechaReservacion;
         this.diasReservacion = diasReservacion;
@@ -30,7 +32,7 @@ public class Reservacion {
         return diasReservacion;
     }
 
-    public Fecha getFechaReservacion() {
+    public Date getFechaReservacion() {
         return fechaReservacion;
     }
 
@@ -51,7 +53,7 @@ public class Reservacion {
         this.diasReservacion = diasReservacion;
     }
 
-    public void setFechaReservacion(Fecha fechaReservacion) {
+    public void setFechaReservacion(Date fechaReservacion) {
         this.fechaReservacion = fechaReservacion;
     }
 
