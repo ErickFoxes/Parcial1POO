@@ -52,8 +52,8 @@ public class Habitaciones {
 
         System.out.println("Ingrese la opcion de lo que desea modificar: ");
         System.out.println("1. Costo");
-        System.out.println("2. Tipo (true/false)");
-        System.out.println("3. Disponiblidad (true/false)");
+        System.out.println("2. Tipo (simple/doble)");
+        System.out.println("3. Disponiblidad (disponible/cancelado)");
         System.out.println("4. Piso");
         System.out.println("5. Numero de habitacion");
         int i = s.nextInt();
@@ -64,20 +64,34 @@ public class Habitaciones {
             case 1:
                 System.out.println("Digite el nuevo costo :");
                 Scanner j = new Scanner(System.in);
-                int costo = j.nextInt();
+                double costo = j.nextDouble();
                 h.setCosto(costo);
                 break;            
             case 2:
-                System.out.println("Digite el nuevo campo:");
+                boolean doble;
+                System.out.println("Digite el nuevo tipo de habitacion: ");
                 Scanner q = new Scanner(System.in);
-                boolean tipo = q.nextBoolean();
-                h.setTipo(tipo);
+                resp = q.next();
+                    if("simple".equals(resp)){
+                        doble=true;
+                        h.setTipo(doble);
+                    }else if("doble".equals(resp)){
+                        doble = false;
+                        h.setTipo(doble);
+                    }
                 break;
             case 3:
-                System.out.println("Digite el nuevo campo:");
+                boolean cancelado;
+                System.out.println("Digite el nuevo estado de la habitacion (disponible/cancelado): ");
                 Scanner k = new Scanner(System.in);
-                boolean disponible = k.nextBoolean();
-                h.setDisponible(disponible);
+                resp = k.next();
+                    if("disponible".equals(resp)){
+                        cancelado = true;
+                        h.setDisponible(cancelado);
+                    }else if("cancelado".equals(resp)){
+                        cancelado = false;
+                        h.setDisponible(cancelado);
+                        }
                 break;
             case 4:
                 System.out.println("Digite el nuevo piso:");
