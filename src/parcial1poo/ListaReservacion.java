@@ -79,6 +79,7 @@ public class ListaReservacion {
     }
 
     public void modificarReserva() {
+        
         Scanner read = new Scanner(System.in);
         int idMod;
         System.out.println("Ingrese el ID de la reserva que quiere modificar");
@@ -86,8 +87,21 @@ public class ListaReservacion {
         idMod = read.nextInt();
         reservas.forEach((rsrvs) -> {
             if (idMod == rsrvs.id_Reservacion) {
-                System.out.println("Modificar cantidad de dias reservacion: ");
-                rsrvs.diasReservacion = read.nextInt();
+                
+                while(true){
+                    int dias;
+                    System.out.println("Modificar cantidad de dias reservacion: ");
+                    System.out.print(": ");    
+                    dias = read.nextInt();
+                        if(dias <= 7){
+                            rsrvs.diasReservacion = dias;
+                            break;
+                        }
+                        else{
+                            System.out.println("No se puede resevar mas de 7 dias");
+                        }
+                }
+                
                 System.out.println("Ingrese fecha de reservacion (dd/MM/aaa)");
                 System.out.print(": ");
                 int dia, mes, annio;
