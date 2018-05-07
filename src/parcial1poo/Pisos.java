@@ -26,8 +26,24 @@ public class Pisos {
     }
    
     public void mostrar(){
-        pisos.values().forEach((p) -> {
-            System.out.println(p.getHabitacion());
+               
+        
+        pisos.values().forEach((h) -> {
+            String Imprimir,mCosto,dispo;
+            
+            if(h.isMayorCosto()==true){
+                mCosto = "Mayor";
+            }else{
+                mCosto = "Normal";
+            }
+            
+            if(h.isDisponible()==true){
+                dispo = "Disponible";
+            }else{
+                dispo = "No Disponible";
+            }
+            Imprimir = "Letra del piso: "+h.getLetraPiso()+"\nCosto: "+mCosto+"\nDisponibilidad: "+dispo;
+            System.out.println(Imprimir);
         });
     }
     
