@@ -18,6 +18,7 @@ public class Menu {
         if (menu == null) {
             menu = new Menu();
         }
+        
         return menu;
     }
 
@@ -52,6 +53,7 @@ public class Menu {
         Pisos pisos = new Pisos();
         Piso piso = new Piso();
         Habitacion hab = new Habitacion();
+        paquete.AgregarPaqueteQuemado();
         while (x != 16) {
             escoger();
             try {
