@@ -21,6 +21,16 @@ public class Pisos {
     pisos = new HashMap<>();
     }
     
+    public void addQuemados(){
+        add("A", new Piso("A",false,true));
+        add("B", new Piso("B",false,true));
+        add("C", new Piso("C",false,true));
+        add("D", new Piso("D",false,true));
+        add("E", new Piso("E",false,true));
+        add("F", new Piso("F",false,true));
+        
+        
+    }
     public void add(String clave, Piso piso) {
         pisos.put(clave, piso);
     }
