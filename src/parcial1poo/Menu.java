@@ -4,7 +4,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
- *
+ *u
  * @author kevin ariel vargas menjivar 00139917
  */
 public class Menu {
