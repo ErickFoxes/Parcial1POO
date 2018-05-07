@@ -58,6 +58,8 @@ public class Habitaciones {
         System.out.println("5. Numero de habitacion");
         int i = s.nextInt();
         
+        String resp;
+        Scanner M = new Scanner(System.in);
         switch (i){
             case 1:
                 System.out.println("Digite el nuevo costo :");
