@@ -5,7 +5,7 @@
  */
 package parcial1poo;
 
-import java.util.ArrayList;
+//import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -50,29 +50,22 @@ public class Pisos {
     public void modificar(String clave) {
         Piso p = pisos.get(clave);
         Scanner s = new Scanner(System.in);
+        
+        System.out.println("Ingrese la opcion de lo que desea modificar: ");
+        System.out.println("1. Mayor costo");
+        System.out.println("2. Disponibilidad");
+        
         int i = s.nextInt();
         
-        switch (i){
+        switch (i){          
             case 1:
-                System.out.println("Digite la neva letra del piso :");
-                Scanner j = new Scanner(System.in);
-                String le = j.next();
-                p.setLetraPiso(le);
-                break;            
-            case 2:
-                System.out.println("Digite el nuevo campo:");
+                System.out.println("Digite si tiene mayor costo o no:");
                 Scanner q = new Scanner(System.in);
                 boolean MY = q.nextBoolean();
                 p.setMayorCosto(MY);
                 break;
-            case 3:
-                System.out.println("Digite el nuevo numero de habitaciones:");
-                Scanner k = new Scanner(System.in);
-                int ff = k.nextInt();
-                p.setHabitaciones(ff);
-                break;
-            case 4:
-                System.out.println("Digite el nuevo campo:");
+            case 2:
+                System.out.println("Digite si esta disponible o no:");
                 Scanner o = new Scanner(System.in);
                  boolean D = o.nextBoolean();
                 p.setDisponible(D);
