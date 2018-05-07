@@ -14,11 +14,11 @@ public class Piso {
     private boolean mayorCosto;
     private int habitaciones;
     private boolean Disponible;
-    private ArrayList habitacion;
+    private Habitacion habitacion;
     
     public Piso(){}
     
-    public Piso(String letraPiso, boolean mayorCosto, boolean Disponible, ArrayList habitacion){
+    public Piso(String letraPiso, boolean mayorCosto, boolean Disponible, Habitacion habitacion){
         this.letraPiso = letraPiso;
         this.mayorCosto = mayorCosto;
         this.Disponible = Disponible;
@@ -64,11 +64,11 @@ public class Piso {
         this.Disponible = Disponible;
     }
 
-    public ArrayList getHabitacion() {
+    public Habitacion getHabitacion() {
         return habitacion;
     }
 
-    public void setHabitacion(ArrayList habitacion) {
+    public void setHabitacion(Habitacion habitacion) {
         this.habitacion = habitacion;
     }
     
