@@ -19,6 +19,7 @@ public class ListaReservacion {
      * Se utiliza para agregar reservaciones a la lista
      */
     public void agregarReserva() {
+        int dias;
         Reservacion reservacion = new Reservacion();
         reservas.add(reservacion);
         Scanner read = new Scanner(System.in);
@@ -28,9 +29,18 @@ public class ListaReservacion {
         System.out.print(": ");
         reservacion.id_Reservacion = read.nextInt();
 
+        while(true){
         System.out.println("¿Cuantos dias se hospedara?");
-        System.out.print(": ");
-        reservacion.diasReservacion = read.nextInt();
+        System.out.print(": ");    
+        dias = read.nextInt();
+            if(dias <= 7){
+                reservacion.diasReservacion = dias;
+                break;
+            }
+            else{
+                System.out.println("No se puede resevar mas de 7 dias");
+            }
+        }
 
         System.out.println("Ingrese fecha de reservacion (dd/MM/aaa)");
         System.out.print(": ");

@@ -1,6 +1,7 @@
 package parcial1poo;
-/*
+
 import java.util.Scanner;
+/*
 import java.util.logging.Level;
 import java.util.logging.Logger;
 */
@@ -17,6 +18,10 @@ public class Parcial1POO {
         Menu menu = Menu.getInstance();
         
         menu.menu();
+//        Habitaciones habitaciones = new Habitaciones();
+//        Scanner M = new Scanner(System.in);
+//        habitaciones.add("d",new Habitacion(M.nextBoolean(),M.nextBoolean(),M.nextDouble(),M.next(),M.nextInt()));
+//        habitaciones.mostrar();
 
 //        ListaPaquetes listaPaquete = new ListaPaquetes();
 //        try {

@@ -1,7 +1,6 @@
 package parcial1poo;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 /**
  *
