@@ -35,7 +35,10 @@ public class Menu {
         System.out.println("10. Agreagar habitaciones");
         System.out.println("11. Mostrar habitaciones");
         System.out.println("12. Modificar habitaciones");
-        System.out.println("13. Salir");
+        System.out.println("13. Agregar piso");
+        System.out.println("14. Mostrar piso");
+        System.out.println("15. Modificar piso");
+        System.out.println("16. Salir");
     }
 
     public void menu() {
@@ -45,9 +48,10 @@ public class Menu {
         ListaPaquetes paquete = new ListaPaquetes();
         ListaClientes cliente = new ListaClientes();
         Habitaciones habitaciones = new Habitaciones();
+        Pisos pisos = new Pisos();
         Piso piso = new Piso();
         Habitacion hab = new Habitacion();
-        while (x != 13) {
+        while (x != 16) {
             escoger();
             try {
                 x = M.nextInt();
@@ -121,6 +125,34 @@ public class Menu {
                         habitaciones.modificar(id_hab);
                         break;
                     case 13:
+                        String letraPiso, mCosto,dispo;
+                        boolean mayorCosto =false, disponibilidad=true;
+                        
+                        System.out.println("Letra del piso:");
+                        letraPiso = M.next();
+                        
+                        System.out.println("¿El piso tiene un mayor costo?(Coloque S para 'Si' o N para 'No'):");
+                        mCosto = M.next();
+                        if("s".equals(mCosto)){
+                            mayorCosto = true;
+                        }else if("n".equals(mCosto)){
+                            mayorCosto = false;
+                        }
+                        
+                        System.out.println("¿El piso esta disponible?(Coloque S para 'Si' o N para 'No'):");
+                        dispo = M.next();
+                        if("s".equals(dispo)){
+                            disponibilidad = true;
+                        }else if("n".equals(dispo)){
+                            disponibilidad = false;
+                        }
+                        
+                        pisos.add(letraPiso, new Piso(letraPiso,mayorCosto,disponibilidad));
+                        break;
+                    case 14:
+                        pisos.mostrar();
+                        break;
+                    case 16:
                         System.out.println("***Fin programa***");
                         break;
                     default:
