@@ -22,13 +22,21 @@ public class Habitaciones {
     
     public void mostrar(){
         habitaciones.values().forEach((h) -> {
-            System.out.println(h.getPiso());
+            System.out.println("Numero de habitacion: "+h.getNumHb()+" tipo: "+h.isTipo()+" Costo: "+h.getCosto()+" Piso: "+h.getPiso()+" Disponible: "+h.isDisponible());
         });
     }
     
     public void modificar(String clave) {
         Habitacion h = habitaciones.get(clave);
         Scanner s = new Scanner(System.in);
+        
+        System.out.println("-- modificar habitaciones --");
+        System.out.println("1. modificar costo");
+        System.out.println("2. modificar tipo");
+        System.out.println("3. modificar disponibilidad");
+        System.out.println("4. modificar piso");
+        System.out.println("5. modificar numero de piso");
+        
         int i = s.nextInt();
         
         switch (i){
@@ -62,6 +70,10 @@ public class Habitaciones {
                 int numHb = l.nextInt();
                 h.setNumHb(numHb);
                 break;
+            default:
+                System.out.println("Ingrese un numero correcto");
+                break;
+                
         }
     }
 }
