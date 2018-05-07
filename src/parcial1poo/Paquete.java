@@ -36,7 +36,7 @@ public class Paquete {
     @Override
     public String toString() {
         
-        return "El paquete "+nombre+" contiene:\nBuffet: "+buffet+ "\nPiscina Ilimitada: "+piscinaI+"\nPiscina: "+ piscina+"\nServicio a la habitación: "+servicioH+"\nminibar: "+minibar+"\ninternet: "+internet+"\ncosto Extra: $"+costoExtra;
+        return "El paquete "+nombre+" contiene:\nBuffet: "+buffet+ "\nPiscina Ilimitada: "+piscinaI+"\nPiscina: "+ piscina+"\nServicio a la habitación: "+servicioH+"\nminibar: "+minibar+"\ninternet: "+internet+"\ncosto Extra al día: $"+costoExtra;
     }
 
 }
