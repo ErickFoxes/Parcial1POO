@@ -18,7 +18,7 @@ public class Piso {
     
     public Piso(){}
     
-    public Piso(String letraPiso, boolean mayorCosto, boolean Disponible, Habitacion habitacion){
+    public Piso(String letraPiso, boolean mayorCosto, boolean Disponible){
         this.letraPiso = letraPiso;
         this.mayorCosto = mayorCosto;
         this.Disponible = Disponible;
