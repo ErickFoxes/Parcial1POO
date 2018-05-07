@@ -39,6 +39,7 @@ public class Menu {
         System.out.println("14. Mostrar piso");
         System.out.println("15. Modificar piso");
         System.out.println("16. Salir");
+        System.out.println("Ingrese la opcion que desea ejecutar: ");
     }
 
     public void menu() {
@@ -54,6 +55,7 @@ public class Menu {
         while (x != 16) {
             escoger();
             try {
+                
                 x = M.nextInt();
 
                 switch (x) {
