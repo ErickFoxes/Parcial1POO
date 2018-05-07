@@ -14,6 +14,30 @@ public class ListaPaquetes {
         paquetes = new ArrayList<>();
                
     }
+    public void AgregarPaqueteQuemado(){
+        Paquete paquete2 = new Paquete();
+        paquetes.add(paquete2);
+        paquete2.nombre = "Premium";
+        paquete2.buffet = true;
+        paquete2.piscinaI = true;
+        paquete2.piscina = false;
+        paquete2.servicioH = true;
+        paquete2.minibar = true;
+        paquete2.internet = true;
+        paquete2.costoExtra = 150;
+        
+        Paquete paquete3 = new Paquete();
+        paquetes.add(paquete3);
+        paquete3.nombre = "Basico";
+        paquete3.buffet = false;
+        paquete3.piscinaI = false;
+        paquete3.piscina = true;
+        paquete3.servicioH = false;
+        paquete3.minibar = false;
+        paquete3.internet = true;
+        paquete3.costoExtra = 10;
+    }
+  
     
     public void AgregarPaquete(){
         Paquete paquete = new Paquete();
@@ -29,36 +53,48 @@ public class ListaPaquetes {
         respuesta = read.nextLine();
         if("s".equals(respuesta)){
             paquete.buffet = true;
+        }else if("n".equals(respuesta)){
+            paquete.buffet = false;
         }
         
         System.out.println("Piscina Ilimitada:");
         respuesta = read.nextLine();
         if("s".equals(respuesta)){
             paquete.piscinaI = true;
+        }else if("n".equals(respuesta)){
+            paquete.piscinaI = false;
         }
         
         System.out.println("Piscina:");
         respuesta = read.nextLine();
         if("s".equals(respuesta)){
             paquete.piscina = true;
+        }else if("n".equals(respuesta)){
+            paquete.piscina = false;
         }
         
         System.out.println("Servicio a la habitación:");
         respuesta = read.nextLine();
         if("s".equals(respuesta)){
             paquete.servicioH = true;
+        }else if("n".equals(respuesta)){
+            paquete.servicioH = false;
         }
         
         System.out.println("Minibar Ilimitado:");
         respuesta = read.nextLine();
         if("s".equals(respuesta)){
             paquete.minibar = true;
+        }else if("n".equals(respuesta)){
+            paquete.minibar = false;
         }
         
         System.out.println("Internet:");
         respuesta = read.nextLine();
         if("s".equals(respuesta)){
             paquete.internet = true;
+        }else if("n".equals(respuesta)){
+            paquete.internet = false;
         }
         
         System.out.println("Ingrese el valor extra que tendrá el paquete: ");
