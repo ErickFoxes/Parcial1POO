@@ -125,7 +125,8 @@ public class Menu {
                         habitaciones.modificar(id_hab);
                         break;
                     case 13:
-                        String letraPiso, mCosto,dispo;
+                        String letraPiso, mCosto,dispo, ClaveP;
+                        int numP;
                         boolean mayorCosto =false, disponibilidad=true;
                         
                         System.out.println("Letra del piso:");
@@ -146,11 +147,17 @@ public class Menu {
                         }else if("n".equals(dispo)){
                             disponibilidad = false;
                         }
-                        
+                       
                         pisos.add(letraPiso, new Piso(letraPiso,mayorCosto,disponibilidad));
                         break;
                     case 14:
                         pisos.mostrar();
+                        break;
+                    case 15:
+                        String id_piso;
+                        System.out.println("Ingrese la letra del piso a modificar: ");
+                        id_piso = M.next();
+                        pisos.modificar(id_piso);
                         break;
                     case 16:
                         System.out.println("***Fin programa***");
