@@ -2,6 +2,7 @@ package parcial1poo;
 
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -172,7 +173,30 @@ public class Habitaciones {
             System.out.println(Imprimir);
         });
     }
-    
+     public int verificar(int clave, String letraPiso){
+        
+        Habitaciones habita = new Habitaciones();
+        int habi2;
+        Scanner s = new Scanner(System.in);
+        Iterator<Habitacion> nom = habitaciones.values().iterator();
+        int i=0;
+        while(nom.hasNext()){
+            Habitacion e= nom.next();
+            if(clave==e.getNumHb() && letraPiso.equals(e.getPiso())){
+                i=i+1;
+            }
+        }
+        if(i!=0){
+            System.out.println("Ya hay una habitacion con ese numero");
+            System.out.println("Ingrese nuevamente:");
+            int pi =s.nextInt();
+            habi2 = verificar(pi,letraPiso);
+        }else{
+            habi2=clave;
+        }
+            return habi2;
+        
+    }
     public void modificar(String clave) {
         
         Habitacion h = habitaciones.get(clave);
