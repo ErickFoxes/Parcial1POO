@@ -7,6 +7,7 @@ package parcial1poo;
 
 //import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -56,7 +57,29 @@ public class Pisos {
             System.out.println(Imprimir);
         });
     }
-    
+    public String verificar(String clave){
+        Pisos pisoss = new Pisos();
+        String pisos2;
+        Scanner s = new Scanner(System.in);
+        Iterator<Piso> nom = pisos.values().iterator();
+        int i=0;
+        while(nom.hasNext()){
+            Piso e= nom.next();
+            if(clave.equals(e.getLetraPiso())){
+                i=i+1;
+            }
+        }
+        if(i==0){
+            System.out.println("No hay pisos con esa letra");
+            System.out.println("Ingrese nuevamente:");
+            String pi =s.next();
+            pisos2 = verificar(pi);
+        }else{
+            pisos2=clave;
+        }
+            return pisos2;
+        
+    }
     public void modificar(String clave) {
         Piso p = pisos.get(clave);
         Scanner s = new Scanner(System.in);
