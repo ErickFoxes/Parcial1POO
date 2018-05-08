@@ -55,6 +55,8 @@ public class Menu {
         Habitacion hab = new Habitacion();
         paquete.AgregarPaqueteQuemado();
         pisos.addQuemados();
+        habitaciones.agregarHabitacionesQuemadas();
+        
         while (x != 16) {
             escoger();
             try {
