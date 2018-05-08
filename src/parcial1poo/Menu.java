@@ -80,10 +80,11 @@ public class Menu {
                         lista.modificarReserva();
                         break;
                     case 7:
-                        String Clave,Piso,id,resp;
+                        String Clave,Piso,id,resp,Piso2;
+                        
                         boolean doble= true,cancelado=false;
                         double costo;
-                        int Num;
+                        int Num,num2;
                                               
                         System.out.println("Tipo de habitacion (Ingrese 'simple' o 'doble'):");
                         resp = M.next();
@@ -103,12 +104,18 @@ public class Menu {
                         
                         System.out.println("¿Cual es el piso?:");
                         Piso = M.next();
+                        Piso2 = pisos.verificar(Piso);
+                        
+                        
+                        
                         System.out.println("Número de habitacion:");
                         Num = M.nextInt();
+                        num2 = habitaciones.verificar(Num,Piso2);
+                        
                         System.out.println("Costo habitacion:");
                         costo = M.nextDouble();
-                        Clave = Piso+Num;
-                        habitaciones.add(Clave,new Habitacion(Clave,doble,cancelado,costo,Piso,Num));
+                        Clave = Piso2+num2;
+                        habitaciones.add(Clave,new Habitacion(Clave,doble,cancelado,costo,Piso2,num2));
                         break;
                     case 8:
                         habitaciones.mostrar();
