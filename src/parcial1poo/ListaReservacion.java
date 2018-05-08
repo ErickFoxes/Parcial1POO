@@ -77,8 +77,13 @@ public class ListaReservacion{
         reservacion.cancelado = false;
         
         System.out.println("¿En que habitacion se hospedara?: ");
+        reservacion.habitacion = read.next();
         
-
+        
+        Habitaciones habi = new Habitaciones();
+        reservacion.costo = 0;
+        
+        
     }
     public void agregarReserva(Reservacion reservacion) throws Exception {
         if (reservacion != null) {
