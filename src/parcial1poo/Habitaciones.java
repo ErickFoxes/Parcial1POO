@@ -167,7 +167,7 @@ public class Habitaciones {
             costo = h.getCosto();
             piso=h.getPiso();
             Clave = h.getIdHabitacion();
-            Imprimir = "id habitacion:"+Clave+"\nTipo Habitacion: "+TipoH+"\nDisponibilidad: "+Disponible+"\nCosto de habitación: "+costo+"\nPiso: "+piso+"\nNumero de habitacion: "+NHabitacion+"\n";
+            Imprimir = "**Habitacion**\n"+"id habitacion:"+Clave+"\nTipo Habitacion: "+TipoH+"\nDisponibilidad: "+Disponible+"\nCosto de habitación: "+costo+"\nPiso: "+piso+"\nNumero de habitacion: "+NHabitacion+"\n";
             
             System.out.println(Imprimir);
         });
