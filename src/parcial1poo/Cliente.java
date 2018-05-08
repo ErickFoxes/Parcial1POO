@@ -9,7 +9,7 @@ public class Cliente {
     String apellido;
     String dui;
     String telefono;
-    private int tarjetaCred;
+    int tarjetaCred;
     
     public Cliente(){}
 
