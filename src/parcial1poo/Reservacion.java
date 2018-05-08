@@ -22,8 +22,19 @@ public class Reservacion {
         
     }
     
+    public String vigente(){
+        if(cancelado==false){
+            return "Esta vigente";
+        }
+        else{
+            return "Esta cancelada";
+        }
+    }
+    
     @Override
     public String toString() {
-        return ">>El id es: "+id_Reservacion+" \n>>Cantidad de dias: "+diasReservacion+"\n>>Fecha reservacion: "+fechaReservacion+"\n>>Cliente: \n"+cliente+"\n>>Estado:"+cancelado;
+        return ">>El id es: "+id_Reservacion+" \n>>Cantidad de dias: "+diasReservacion+"\n>>Fecha reservacion: "+fechaReservacion+"\n>>Cliente: \n"+cliente
+                +"\n>>Estado:"+ vigente();
+
     }
 }
