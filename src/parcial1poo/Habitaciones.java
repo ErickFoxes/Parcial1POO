@@ -20,6 +20,174 @@ public class Habitaciones {
         habitaciones.put(clave, habitacion);
     }
     
+    public void agregarHabitacionesQuemadasA(){
+        String Clave,Piso;
+        boolean doble,cancelado;
+        double costo;
+        int Num;
+
+        for(int i = 0; i < 10; i=i+2){
+            doble = false;
+            cancelado = true;
+            Piso = "A";
+            costo = 200;
+            Num = i+2;
+            Clave = Piso+Num;
+            add(Clave,new Habitacion(Clave,doble,cancelado,costo,Piso,Num));
+        }
+        
+        for(int i = 0; i < 10; i=i+2){
+            doble = true;
+            cancelado = true;
+            Piso = "A";
+            costo = 150;
+            Num = i+1;
+            Clave = Piso+Num;
+            add(Clave,new Habitacion(Clave,doble,cancelado,costo,Piso,Num));
+        }
+      
+     }
+    
+    public void agregarHabitacionesQuemadasB(){
+        String Clave,Piso;
+        boolean doble,cancelado;
+        double costo;
+        int Num;
+
+        for(int i = 0; i < 10; i=i+2){
+            doble = false;
+            cancelado = true;
+            Piso = "B";
+            costo = 200;
+            Num = i+2;
+            Clave = Piso+Num;
+            add(Clave,new Habitacion(Clave,doble,cancelado,costo,Piso,Num));
+        }
+        
+        for(int i = 0; i < 10; i=i+2){
+            doble = true;
+            cancelado = true;
+            Piso = "B";
+            costo = 150;
+            Num = i+1;
+            Clave = Piso+Num;
+            add(Clave,new Habitacion(Clave,doble,cancelado,costo,Piso,Num));
+        }
+      
+     }
+    
+    public void agregarHabitacionesQuemadasC(){
+        String Clave,Piso;
+        boolean doble,cancelado;
+        double costo;
+        int Num;
+
+        for(int i = 0; i < 10; i=i+2){
+            doble = false;
+            cancelado = true;
+            Piso = "C";
+            costo = 200;
+            Num = i+2;
+            Clave = Piso+Num;
+            add(Clave,new Habitacion(Clave,doble,cancelado,costo,Piso,Num));
+        }
+        
+        for(int i = 0; i < 10; i=i+2){
+            doble = true;
+            cancelado = true;
+            Piso = "C";
+            costo = 150;
+            Num = i+1;
+            Clave = Piso+Num;
+            add(Clave,new Habitacion(Clave,doble,cancelado,costo,Piso,Num));
+        }
+      
+     }
+    
+    public void agregarHabitacionesQuemadasD(){
+        String Clave,Piso;
+        boolean doble,cancelado;
+        double costo;
+        int Num;
+
+        for(int i = 0; i < 10; i=i+2){
+            doble = false;
+            cancelado = true;
+            Piso = "D";
+            costo = 200;
+            Num = i+2;
+            Clave = Piso+Num;
+            add(Clave,new Habitacion(Clave,doble,cancelado,costo,Piso,Num));
+        }
+        
+        for(int i = 0; i < 10; i=i+2){
+            doble = true;
+            cancelado = true;
+            Piso = "D";
+            costo = 150;
+            Num = i+1;
+            Clave = Piso+Num;
+            add(Clave,new Habitacion(Clave,doble,cancelado,costo,Piso,Num));
+        }
+      
+     }
+    
+    public void agregarHabitacionesQuemadasE(){
+        String Clave,Piso;
+        boolean doble,cancelado;
+        double costo;
+        int Num;
+
+        for(int i = 0; i < 10; i=i+2){
+            doble = false;
+            cancelado = true;
+            Piso = "E";
+            costo = 200;
+            Num = i+2;
+            Clave = Piso+Num;
+            add(Clave,new Habitacion(Clave,doble,cancelado,costo,Piso,Num));
+        }
+        
+        for(int i = 0; i < 10; i=i+2){
+            doble = true;
+            cancelado = true;
+            Piso = "E";
+            costo = 150;
+            Num = i+1;
+            Clave = Piso+Num;
+            add(Clave,new Habitacion(Clave,doble,cancelado,costo,Piso,Num));
+        }
+      
+     }
+    
+    public void agregarHabitacionesQuemadasF(){
+        String Clave,Piso;
+        boolean doble,cancelado;
+        double costo;
+        int Num;
+
+        for(int i = 0; i < 10; i=i+2){
+            doble = false;
+            cancelado = true;
+            Piso = "F";
+            costo = 200;
+            Num = i+2;
+            Clave = Piso+Num;
+            add(Clave,new Habitacion(Clave,doble,cancelado,costo,Piso,Num));
+        }
+        
+        for(int i = 0; i < 10; i=i+2){
+            doble = true;
+            cancelado = true;
+            Piso = "F";
+            costo = 150;
+            Num = i+1;
+            Clave = Piso+Num;
+            add(Clave,new Habitacion(Clave,doble,cancelado,costo,Piso,Num));
+        }
+      
+     }
+    
     public void mostrar(){
         habitaciones.values().forEach((h) -> {
             String Imprimir,TipoH,Disponible,piso,Clave;
