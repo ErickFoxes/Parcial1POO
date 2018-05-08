@@ -173,6 +173,7 @@ public class Habitaciones {
             System.out.println(Imprimir);
         });
     }
+   
      public int verificar(int clave, String letraPiso){
         
         Habitaciones habita = new Habitaciones();
@@ -197,6 +198,25 @@ public class Habitaciones {
             return habi2;
         
     }
+      public double buscar(String idHabitacion){
+        Iterator<Habitacion> nomb = habitaciones.values().iterator();
+        
+        int i=0;
+        double costo=0;
+         
+        while(nomb.hasNext()){
+            Habitacion e= nomb.next();
+            if(idHabitacion.equals(e.getIdHabitacion())){
+                costo = e.getCosto();
+                break;
+            }
+        }
+        return costo;
+    }
+     
+   
+     
+     
     public void modificar(String clave) {
         
         Habitacion h = habitaciones.get(clave);

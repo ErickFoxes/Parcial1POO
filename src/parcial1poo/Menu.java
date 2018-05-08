@@ -45,7 +45,6 @@ public class Menu {
         Scanner M = new Scanner(System.in);
         ListaReservacion lista = new ListaReservacion();
         ListaPaquetes paquete = new ListaPaquetes();
-        ListaClientes cliente = new ListaClientes();
         Habitaciones habitaciones = new Habitaciones();
         Pisos pisos = new Pisos();
         Piso piso = new Piso();
