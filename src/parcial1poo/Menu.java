@@ -28,12 +28,12 @@ public class Menu {
         System.out.println("2. Mostrar paquetes ingresados");
         System.out.println("3. Modificar Paquetes");
         System.out.println("4. Ingresar Reservación");
-        System.out.println("5. Mostrar Reservaciones (por semana)");
+        System.out.println("5. Mostrar Reservaciones");
         System.out.println("6. Modificar Reservación");
         System.out.println("7. Agregar cliente");
         System.out.println("8. Modificar cliente");
         System.out.println("9. Mostrar clientes");
-        System.out.println("10. Agreagar habitaciones");
+        System.out.println("10. Agregar habitaciones");
         System.out.println("11. Mostrar habitaciones");
         System.out.println("12. Modificar habitaciones");
         System.out.println("13. Agregar piso");
