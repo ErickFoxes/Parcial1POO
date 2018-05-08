@@ -20,7 +20,7 @@ public class Habitaciones {
         habitaciones.put(clave, habitacion);
     }
     
-    public void agregarHabitacionesQuemadasA(){
+    public void agregarHabitacionesQuemadas(){
         String Clave,Piso;
         boolean doble,cancelado;
         double costo;
@@ -46,14 +46,6 @@ public class Habitaciones {
             add(Clave,new Habitacion(Clave,doble,cancelado,costo,Piso,Num));
         }
       
-     }
-    
-    public void agregarHabitacionesQuemadasB(){
-        String Clave,Piso;
-        boolean doble,cancelado;
-        double costo;
-        int Num;
-
         for(int i = 0; i < 10; i=i+2){
             doble = false;
             cancelado = true;
@@ -73,14 +65,6 @@ public class Habitaciones {
             Clave = Piso+Num;
             add(Clave,new Habitacion(Clave,doble,cancelado,costo,Piso,Num));
         }
-      
-     }
-    
-    public void agregarHabitacionesQuemadasC(){
-        String Clave,Piso;
-        boolean doble,cancelado;
-        double costo;
-        int Num;
 
         for(int i = 0; i < 10; i=i+2){
             doble = false;
@@ -101,14 +85,6 @@ public class Habitaciones {
             Clave = Piso+Num;
             add(Clave,new Habitacion(Clave,doble,cancelado,costo,Piso,Num));
         }
-      
-     }
-    
-    public void agregarHabitacionesQuemadasD(){
-        String Clave,Piso;
-        boolean doble,cancelado;
-        double costo;
-        int Num;
 
         for(int i = 0; i < 10; i=i+2){
             doble = false;
@@ -129,15 +105,7 @@ public class Habitaciones {
             Clave = Piso+Num;
             add(Clave,new Habitacion(Clave,doble,cancelado,costo,Piso,Num));
         }
-      
-     }
-    
-    public void agregarHabitacionesQuemadasE(){
-        String Clave,Piso;
-        boolean doble,cancelado;
-        double costo;
-        int Num;
-
+        
         for(int i = 0; i < 10; i=i+2){
             doble = false;
             cancelado = true;
@@ -157,14 +125,6 @@ public class Habitaciones {
             Clave = Piso+Num;
             add(Clave,new Habitacion(Clave,doble,cancelado,costo,Piso,Num));
         }
-      
-     }
-    
-    public void agregarHabitacionesQuemadasF(){
-        String Clave,Piso;
-        boolean doble,cancelado;
-        double costo;
-        int Num;
 
         for(int i = 0; i < 10; i=i+2){
             doble = false;
@@ -207,7 +167,7 @@ public class Habitaciones {
             costo = h.getCosto();
             piso=h.getPiso();
             Clave = h.getIdHabitacion();
-            Imprimir = "id habitacion:"+Clave+"\nTipo Habitacion: "+TipoH+"\nDisponibilidad: "+Disponible+"\nCosto de habitación: "+costo+"\nPiso: "+piso+"\nNumero de habitacion: "+NHabitacion;
+            Imprimir = "id habitacion:"+Clave+"\nTipo Habitacion: "+TipoH+"\nDisponibilidad: "+Disponible+"\nCosto de habitación: "+costo+"\nPiso: "+piso+"\nNumero de habitacion: "+NHabitacion+"\n";
             
             System.out.println(Imprimir);
         });
