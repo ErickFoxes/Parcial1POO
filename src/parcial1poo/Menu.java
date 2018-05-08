@@ -30,16 +30,13 @@ public class Menu {
         System.out.println("4. Ingresar Reservación");
         System.out.println("5. Mostrar Reservaciones");
         System.out.println("6. Modificar Reservación");
-        System.out.println("7. Agregar cliente");
-        System.out.println("8. Modificar cliente");
-        System.out.println("9. Mostrar clientes");
-        System.out.println("10. Agregar habitaciones");
-        System.out.println("11. Mostrar habitaciones");
-        System.out.println("12. Modificar habitaciones");
-        System.out.println("13. Agregar piso");
-        System.out.println("14. Mostrar piso");
-        System.out.println("15. Modificar piso");
-        System.out.println("16. Salir");
+        System.out.println("7. Agregar habitaciones");
+        System.out.println("8. Mostrar habitaciones");
+        System.out.println("9. Modificar habitaciones");
+        System.out.println("10. Agregar piso");
+        System.out.println("11. Mostrar piso");
+        System.out.println("12. Modificar piso");
+        System.out.println("13. Salir");
         System.out.println("Ingrese la opcion que desea ejecutar: ");
     }
 
@@ -57,7 +54,7 @@ public class Menu {
         pisos.addQuemados();
         habitaciones.agregarHabitacionesQuemadas();
         
-        while (x != 16) {
+        while (x != 13) {
             escoger();
             try {
                 
@@ -83,15 +80,6 @@ public class Menu {
                         lista.modificarReserva();
                         break;
                     case 7:
-                        cliente.agregarCliente();
-                        break;
-                    case 8:
-                        cliente.ModificarCliente();
-                        break;
-                    case 9:
-                        cliente.MostrarCliente();
-                        break;
-                    case 10:
                         String Clave,Piso,id,resp;
                         boolean doble= true,cancelado=false;
                         double costo;
@@ -122,16 +110,16 @@ public class Menu {
                         Clave = Piso+Num;
                         habitaciones.add(Clave,new Habitacion(Clave,doble,cancelado,costo,Piso,Num));
                         break;
-                    case 11:
+                    case 8:
                         habitaciones.mostrar();
                         break;
-                    case 12:
+                    case 9:
                         String id_hab;
                         System.out.println("Ingrese el Id de la habitacion: ");
                         id_hab = M.next();
                         habitaciones.modificar(id_hab);
                         break;
-                    case 13:
+                    case 10:
                         String letraPiso, mCosto,dispo, ClaveP;
                         int numP;
                         boolean mayorCosto =false, disponibilidad=true;
@@ -157,16 +145,16 @@ public class Menu {
                        
                         pisos.add(letraPiso, new Piso(letraPiso,mayorCosto,disponibilidad));
                         break;
-                    case 14:
+                    case 11:
                         pisos.mostrar();
                         break;
-                    case 15:
+                    case 12:
                         String id_piso;
                         System.out.println("Ingrese la letra del piso a modificar: ");
                         id_piso = M.next();
                         pisos.modificar(id_piso);
                         break;
-                    case 16:
+                    case 13:
                         System.out.println("***Fin programa***");
                         break;
                     default:
