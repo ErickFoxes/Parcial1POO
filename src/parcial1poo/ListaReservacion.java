@@ -58,6 +58,23 @@ public class ListaReservacion {
         f = new Fecha(dia, mes, annio);
         reservacion.fechaReservacion = f;
         
+        System.out.println("Ingrese los datos del cliente: ");
+        String nombre, apellido, dui, telefono;
+        int tarjetaCred;
+        System.out.println("Ingrese el nombre del cliente: ");
+        nombre = read.next();
+        System.out.println("Ingrese el apellido del cliente: ");
+        apellido = read.next();
+        System.out.println("Ingrese el dui del cliente: ");
+        dui = read.next();
+        System.out.println("Ingrese el telefono del cliente: ");
+        telefono = read.next();
+        System.out.println("Ingrese la tarjeta de credito del cliente: ");
+        tarjetaCred = read.nextInt();
+        Cliente c;
+        c = new Cliente(nombre, apellido, dui, telefono, tarjetaCred);
+        reservacion.cliente = c;
+        
         reservacion.cancelado = false;
         
         System.out.println("¿En que habitacion se hospedara?");
@@ -116,6 +133,24 @@ public class ListaReservacion {
                 annio = read.nextInt(); 
                 Fecha fecha = new Fecha(dia, mes, annio);
                 rsrvs.fechaReservacion = fecha;
+                
+                System.out.println("Ingrese los datos del cliente: ");
+                String nombre, apellido, dui, telefono;
+                int tarjetaCred;
+                System.out.println("Ingrese el nombre del cliente: ");
+                nombre = read.next();
+                System.out.println("Ingrese el apellido del cliente: ");
+                apellido = read.next();
+                System.out.println("Ingrese el dui del cliente: ");
+                dui = read.next();
+                System.out.println("Ingrese el telefono del cliente: ");
+                telefono = read.next();
+                System.out.println("Ingrese la tarjeta de credito del cliente: ");
+                tarjetaCred = read.nextInt();
+                Cliente client;
+                client = new Cliente(nombre, apellido, dui, telefono, tarjetaCred);
+                rsrvs.cliente = client;
+                
                 System.out.println("Estado reserva: Cancelado (true/false)");
                 rsrvs.cancelado = read.nextBoolean();
                 
@@ -129,5 +164,6 @@ public class ListaReservacion {
         reservas.forEach((rsrvs) -> {
             System.out.println(rsrvs.toString());
         });
+        System.out.println("\n");
     }
 }
