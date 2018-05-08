@@ -52,7 +52,7 @@ public class Pisos {
             }else{
                 dispo = "No Disponible";
             }
-            Imprimir = "Letra del piso: "+h.getLetraPiso()+"\nCosto: "+mCosto+"\nDisponibilidad: "+dispo;
+            Imprimir = "**Piso**"+"Letra del piso: "+h.getLetraPiso()+"\nCosto: "+mCosto+"\nDisponibilidad: "+dispo;
             System.out.println(Imprimir);
         });
     }
