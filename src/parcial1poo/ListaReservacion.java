@@ -19,6 +19,7 @@ public class ListaReservacion{
      */
     public void agregarReserva() {           
         int dias;
+        int meses;
         Reservacion reservacion = new Reservacion();
         reservas.add(reservacion);
         Scanner read = new Scanner(System.in);
@@ -47,9 +48,20 @@ public class ListaReservacion{
         System.out.println("Ingresa el dia");
         System.out.print(": ");
         dia = read.nextInt();
-        System.out.println("Ingresa el mes");
-        System.out.print(": ");
-        mes = read.nextInt();
+        
+        while(true){
+            System.out.println("Ingresa el mes");
+            System.out.print(": ");
+            meses = read.nextInt();
+                if(meses <=12){
+                    mes = meses;
+                    break;
+                }else{
+                    System.out.println("No es un mes valido");
+                }
+                    
+        }
+        
         System.out.println("Ingresa el annio");
         System.out.print(": ");
         annio = read.nextInt(); 
@@ -132,6 +144,7 @@ public class ListaReservacion{
                         } 
                         break;            
                     case 2:
+                        int meses;
                         System.out.println("Digite la nueva fecha: ");
                         Scanner q = new Scanner(System.in);
 
@@ -139,8 +152,20 @@ public class ListaReservacion{
                         int dia, mes, annio;
                         System.out.println("Ingresa el dia: ");
                         dia = q.nextInt();
-                        System.out.println("Ingresa el mes: ");
-                        mes = q.nextInt();
+                        
+
+                        while(true){
+                            System.out.println("Ingresa el mes: ");
+                             meses = q.nextInt();
+                                if(meses <=12){
+                                    mes = meses;
+                                    break;
+                                }else{
+                                    System.out.println("No es un mes valido");
+                                }
+
+                        }
+                        
                         System.out.println("Ingresa el annio: ");
                         annio = q.nextInt(); 
                         Fecha fecha = new Fecha(dia, mes, annio);
